@@ -2,8 +2,8 @@
 <head>
   <title>Connect 4</title>
   <link href="connect4.css" rel="stylesheet">
-   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=0">
-  <meta name="apple-mobile-web-app-title" content="Micro-Wars">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=0">
+  <meta name="apple-mobile-web-app-title" content="Feel">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black" >
 </head>
@@ -53,13 +53,16 @@
     </tr>
   </table>
 
-  <button class="startGame">Start Streaking</button>
+  
+
+  <button id="buttons" class="startGame">Start Streaking</button>
+  <button id="buttons" class="instructions">Instructions</button>
 </div>
 
 
 
 <div class="playArea hide">
-<button class="start">New Petri Dish</button>
+<button class="start" id="newDish">New Petri Dish</button>
 <button class="start" id="resetGame">New Microbes</button>
 
 <div id="game">
@@ -71,6 +74,48 @@
 <div class="load hide">
   <h4 class="generate">Generating Game</h4>
   <div class="loader"></div>
+</div>
+
+<div class="instructionsArea hide">
+  <h5 class="instructp">This is my rendention of Connect-Four for Microbiologists. If you streak four colonies in a row, your microbe will take over the Petri Dish.</h5>
+  <table class="inputForm">
+    <tr class="inputRow">
+      <td class="inputTop">Petri Dish Size</td>
+      <td class="inputTop">Agar Types</td>
+    </tr>
+    <tr class="inputRow">
+      <td class="inputCell">
+        <button class="inputButton">These are the small plates in which scientist grow bacteria. </button><br>
+        
+        
+      </td>
+      <td class="inputCell">
+        <button class="inputButton">"Game background color" <br> Different food for bacteria.</button><br>
+        
+      </td>
+    </tr>
+    <tr class="formSpacer">
+      <td class="inputCell">
+      </td>
+      <td class="inputCell">
+      </td>
+    </tr>
+    <tr class="inputRow">
+      <td class="inputTop">Microbe 1</td>
+      <td class="inputTop">Microbe 2</td>
+    </tr>
+    <tr class="inputRow">
+      <td class="inputCell">
+        <button class="inputButton">Choose player 1 color</button><br>
+        
+      </td>
+      <td class="inputCell">
+        <button class="inputButton">Choose player 2 color</button><br>
+      </td>
+    </tr>
+  </table>
+  <button class="istart" id="restGame">Back to menu</button>
+  
 </div>
   
 <script src="connect4.js"></script>
