@@ -1,0 +1,78 @@
+<!doctype html>
+<head>
+  <title>Connect 4</title>
+  <link href="connect4.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+  <meta name="apple-mobile-web-app-title" content="Feel">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" >
+</head>
+
+
+<body>
+  <div class="gameplay">
+  <h1 class="header">Micro-War</h1>
+  <table class="inputForm">
+    <tr class="inputRow">
+      <td class="inputTop">Petri Dish Size</td>
+      <td class="inputTop">Agar Type</td>
+    </tr>
+    <tr class="inputRow">
+      <td class="inputCell">
+        <button class="inputButton sizechoo" value="5">5 X 5</button><br>
+        <button class="inputButton sizechoo" value="6">6 X 6</button><br>
+        <button class="inputButton sizechoo" value="7">7 X 7</button><br>
+        
+      </td>
+      <td class="inputCell">
+        <button class="inputButton agarchoo" value="rgba(230, 184, 32, 0.5)">TSA</button><br>
+        <button class="inputButton agarchoo" value="rgba(207, 65, 40, 0.5)">MacConkey</button><br>
+        <button class="inputButton agarchoo" value="rgba(0, 255, 255, 0.5)">Hektoen</button><br>
+      </td>
+    </tr>
+    <tr class="formSpacer">
+      <td class="inputCell">
+      </td>
+      <td class="inputCell">
+      </td>
+    </tr>
+    <tr class="inputRow">
+      <td class="inputTop">Microbe 1</td>
+      <td class="inputTop">Microbe 2</td>
+    </tr>
+    <tr class="inputRow">
+      <td class="inputCell">
+        <button class="inputButton p1choo" value="plum">E. coli</button><br>
+        <button class="inputButton p1choo" value="darkorange">S. aureus</button><br>
+      </td>
+      <td class="inputCell">
+        <button class="inputButton p2choo" value="darkolivegreen">M. tuberculosis</button><br>
+        <button class="inputButton p2choo" value="lightsalmon">C. difficile</button><br>
+      </td>
+    </tr>
+  </table>
+
+  <button class="startGame">Start Streaking</button>
+</div>
+
+
+
+<div class="playArea hide">
+<button class="start">New Petri Dish</button>
+<button class="start" id="resetGame">New Microbes</button>
+
+<div id="game">
+  <table id="board"></table>
+</div>
+</div>
+
+
+<div class="load hide">
+  <h4 class="generate">Generating Game</h4>
+  <div class="loader"></div>
+</div>
+
+<script src="connect4.js"></script>
+
+</body>
+</html>
