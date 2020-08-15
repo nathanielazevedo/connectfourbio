@@ -1,6 +1,75 @@
-/* game board table */
+
+*{
+  cursor: url(rsz_innoc.png), pointer;
+}
+
+/* Smartphones (portrait) -----------  */
+@media only screen and (max-width: 1200px) {
+  .playArea{
+    margin-left: 4vw;
+    height: 100%;
+  }
+
+	#game {
+		border-radius: 50%;
+		background-color: rgb(153, 152, 152);
+		height: 85vw;
+		width: 85vw; 
+    text-align: center;
+		margin: auto 0;
+    border-left: 1.2vw rgba(7, 7, 7) double;
+    border-right: .5vw rgba(7, 7, 7) solid;
+    border-top: .3vw rgb(7, 7, 7) solid;
+    border-bottom: 1.5vw rgba(7, 7, 7) double;
+    cursor: url(rsz_innoc.png), pointer;
+    box-shadow: -3px 25px 0px rgb(75, 73, 73);
+    margin-top: 15vw;
+    opacity: 1;
+    transition: background-color 1s;
+	}
+
+	.start{
+    border-radius: 50%;
+    width: 25vw;
+    height: 25vw; 
+    cursor: url(rsz_innoc.png), pointer;
+    background-color: rgba(230, 184, 32, 0.5); 
+    border-left: 1.1vw rgba(7, 7, 7) double;
+    border-right: .5vw rgba(7, 7, 7) solid;
+    border-top: .3vw rgb(7, 7, 7) solid;
+    border-bottom: 1.1vw rgba(7, 7, 7) double;
+    margin-left: 5vw;
+    margin-top: 5vw; 
+    box-shadow: -2px 7px 0 rgb(80, 66, 19);
+    font-family: monospace;
+    font-weight: bolder;
+    
+  }
+
+  .win{
+    margin-top: 20vw;
+    font-family: monospace;
+  }
+
+  #resetGame{
+    position: absolute;
+    top: 25px;
+    right: 15vw;
+  }
+
+
+	#board {
+		margin: 0 auto;
+		margin-top: 11vw;
+		width: 59vw;
+    height: 59vw;
+    border-collapse: separate;
+    border-spacing: 7px;
+    
+  }
+  
+
 body {
-	/* background-image: linear-gradient(silver, black); */
 	cursor: url(rsz_innoc.png), pointer;
   height: 100%;
   background-color: rgba(105, 92, 92, 0.788);
@@ -70,12 +139,13 @@ body {
 }
 
 .startGame {
-	margin: 0 auto;
+  margin: 0 auto;
+  height: 100%;
 	text-align: center;
   width: 75vw;
 	margin-left: 10vw;
-	margin-top: 17%;
-	padding-top: 5vw;
+	margin-top: 10vw;
+	padding-top: 2vw;
 	padding-bottom: 5vw;
   color: white;
   font-weight: bold;
@@ -86,6 +156,24 @@ body {
   font-family: monospace;
   /* text-shadow: -1px -1px 0 white, -1px 1px 0 white, -2px 2px 0 white, 1px 1px 0 white; */
   box-shadow: -1px -1px 0 white, -1px 1px 0 white, -2px 2px 0 white, 1px 1px 0 white;
+}
+
+.instructions{
+  margin: 0 auto;
+  height: 100%;
+	text-align: center;
+  width: 75vw;
+	margin-left: 10vw;
+	margin-top: 10px;
+	padding-top: 1vw;
+	padding-bottom: 1vw;
+  color: white;
+  font-weight: bold;
+	background-color: black;
+	border: 3px solid black;
+  font-size: 3vw;
+  border-radius: 30%;
+  font-family: monospace;
 }
 
 .generate{
@@ -99,8 +187,8 @@ body {
 }
 
 .loader {
-  border: 2vw solid black; /* Light grey */
-  border-top: 2vw solid white; /* Blue */
+  border: 2vw solid black; 
+  border-top: 2vw solid white; 
   border-radius: 50%;
   width: 35vw;
   height: 35vw;
@@ -115,12 +203,7 @@ body {
   100% { transform: rotate(360deg); }
 }
 
-.playArea{
-  margin-top: 15vh;
 
-
-
-  }
   @keyframes drop {
     0% {transform: translateY(-300px);}
     40%{transform: translateY(-29px);}
@@ -131,11 +214,6 @@ body {
     100%{transform: translateX(-25px) translateY(-10px);}
   
 }
-
- /* @keyframes drop {
-  0%   {top: 30%}
-  100% {top: 100%}
-}  */
 
 .innoc{
   background-image: url(rsz_innoc.png);
@@ -150,35 +228,12 @@ body {
 }
 
 
-
-/*
- #game{
-  border-radius: 50%;
-  background-color: aqua;
-  opacity: .9;
-  height: 75vw;
-  width: 75vw;
-  text-align: center;
-  margin: 0 auto;
-  position: relative;
-  border: 2px black groove;
-  cursor: url(rsz_innoc.png), pointer; 
-
-/* #board{
-  margin: 0 auto;
-  margin-top: 10vw;
-  width: 55vw;
-  height: 55vw;
-
-}   */
-
 .playArea td{
   border-radius: 50%;
   border-left: black solid 1px;
   border-bottom: black solid 1px;
   opacity: 1;
   box-shadow: -2px 5px 0 rgba(37, 37, 36, 0.514);
-  
 } 
 
 
@@ -192,7 +247,344 @@ body {
 }
 
 .Two {
+  width: 100%;
+  height: 100%; 
+  border-radius: 50%;
+  background-color: #ffb31a;
+  opacity: 1;
+  transition: background-color 2s;
+} 
+
+ #column-top td {
+  border-left: white solid 1px;
+  border-bottom: white solid 1px;
+} 
+
+.instructp{
+  font-size: 3vh;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 45px;
+  background-color: black;
+  border: white 5px solid;
+  color: white;
+  font-family: monospace;
+  padding: 15px;
+}
+
+.istart{
+  margin: 0 auto;
+  text-align: center;
+  width: 20vh;
+  margin-top: 45px;
+  font-size: 2vh;
+  height: 5vh;
+  margin-left: 5vw;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  background-color: black;
+  border: 3px solid black;
+  border-radius: 30%;
+  font-family: monospace;
+  /* text-shadow: -1px -1px 0 white, -1px 1px 0 white, -2px 2px 0 white, 1px 1px 0 white; */
+  box-shadow: -1px -1px 0 white, -1px 1px 0 white, -2px 2px 0 white, 1px 1px 0 white;
+
+}
+}
+
+
+
+
+
+
+
+
+
+@media only screen 
+and (min-width : 1200px) {
+
+  body {
+    cursor: url(rsz_innoc.png), pointer;
+    height: 100%;
+    background-color: rgba(105, 92, 92, 0.788);
+  }
+
+  .playArea{
+    margin-left: 4vw;
+    height: 100%;
+    cursor: url(rsz_innoc.png), pointer;
+
+  }
+
+	#game {
+		border-radius: 50%;
+		background-color: rgb(153, 152, 152);
+		height: 80vh;
+		width: 80vh; 
+    text-align: center;
+		margin: auto 0;
+    border-left: 1.2vw rgba(7, 7, 7) double;
+    border-right: .5vw rgba(7, 7, 7) solid;
+    border-top: .3vw rgb(7, 7, 7) solid;
+    border-bottom: 1.5vw rgba(7, 7, 7) double;
+    cursor: url(rsz_innoc.png), pointer;
+    box-shadow: -3px 25px 0px rgb(75, 73, 73);
+    margin-top: 10vh;
+    opacity: 1;
+    transition: background-color 1s;
+    float: right;
+    position: absolute;
+    left: 25vw;
+	}
+
+	.start{
+    border-radius: 50%;
+    width: 25vh;
+    height: 25vh; 
+    cursor: url(rsz_innoc.png), pointer;
+    background-color: rgba(230, 184, 32, 0.5); 
+    border-left: 1.1vh rgba(7, 7, 7) double;
+    border-right: .5vh rgba(7, 7, 7) solid;
+    border-top: .3vh rgb(7, 7, 7) solid;
+    border-bottom: 1.1vh rgba(7, 7, 7) double;
+    margin-left: 3vw;
+    margin-top: 5vh; 
+    box-shadow: -2px 7px 0 rgb(80, 66, 19);
+    font-family: monospace;
+    font-weight: bolder;
+    font-size: 2vw;
+    
+  }
+
+  .win{
+    margin-top: 20vw;
+    font-family: monospace;
+  }
+
+  #resetGame{
+    position: absolute;
+    top: 65vh;
+    right: 75vw;
+    
+  }
+
+  #newDish{
+    position: absolute;
+    top: 10vh;
+    right: 75vw;
+  }
+
+	#board {
+		margin: 0 auto;
+		margin-top: 10vh;
+		width: 55vh;
+    height: 55vh;
+    border-collapse: separate;
+    border-spacing: 7px;
+    
+  }
   
+.hide{
+  display: none;
+}
+
+.istart{
+    margin: 0 auto;
+    text-align: center;
+    width: 20vh;
+    margin-top: 45px;
+    font-size: 2vh;
+    height: 5vh;
+    margin-left: 5vw;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    background-color: black;
+    border: 3px solid black;
+    border-radius: 30%;
+    font-family: monospace;
+    /* text-shadow: -1px -1px 0 white, -1px 1px 0 white, -2px 2px 0 white, 1px 1px 0 white; */
+    box-shadow: -1px -1px 0 white, -1px 1px 0 white, -2px 2px 0 white, 1px 1px 0 white;
+
+}
+
+.instructp{
+  font-size: 3vh;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 45px;
+  background-color: black;
+  border: white 5px solid;
+  color: white;
+  font-family: monospace;
+  padding: 15px;
+}
+.gameplay{
+  
+  
+}
+
+.header {
+  color: black;
+  text-shadow: -2px -2px 0 white, 0px 0px 0 white, -5px 5px 0 white, 1px 1px 0 white;
+  font-size: 10vh;
+  margin: 0 auto;
+  text-align: center;
+  font-family: monospace;
+  margin-top: 7vh;
+  cursor: url(rsz_innoc.png), pointer;
+}
+
+
+
+
+.inputForm .inputRow .inputCell {
+	outline: solid black 2px;
+	cursor: url(rsz_innoc.png), pointer;
+	
+}
+
+.inputForm {
+	margin-top: 5vh;
+  border-spacing: 5vh 0vw;
+  margin-left: vw;
+  width: 100%;
+}
+
+.formSpacer {
+	height: 5vh;
+}
+
+
+
+#buttons{
+  margin: 0 auto;
+  text-align: center;
+  width: 25vh;
+  margin-top: 50px;
+  font-size: 2vh;
+  height: 10vh;
+  margin-left: 20vw;
+	text-align: center;
+  color: white;
+  font-weight: bold;
+	background-color: black;
+	border: 3px solid black;
+  border-radius: 30%;
+  font-family: monospace;
+  /* text-shadow: -1px -1px 0 white, -1px 1px 0 white, -2px 2px 0 white, 1px 1px 0 white; */
+  box-shadow: -1px -1px 0 white, -1px 1px 0 white, -2px 2px 0 white, 1px 1px 0 white;
+}
+
+.inputTop {
+	
+	background-color: black;
+	outline: solid black 2px;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 4vh;
+	font-family: monospace;
+	color: white;
+  padding: 1vh ;
+  
+}
+
+.inputCell {
+	color: white;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 1vh;
+	padding: 3vh;
+  font-family: monospace;
+  cursor: url(rsz_innoc.png), pointer;
+}
+
+.inputButton {
+	background: none;
+	color: white;
+	border: none;
+	font-size: 3.2vh;
+  font-family: monospace;
+  transition: background-color 1s;
+  text-shadow: -1px -1px 0 black, 1px 1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+}
+
+.startGame {
+
+}
+
+.generate{
+    color: black;
+    text-shadow: -2px -2px 0 white, 0px 0px 0 white, -5px 5px 0 white, 1px 1px 0 white;
+    font-size: 5vw;
+    margin: 0 auto;
+    text-align: center;
+    font-family: monospace;
+    margin-top: 20vh;
+}
+
+.loader {
+  border: 1vw solid black; 
+  border-top: 1vw solid white; 
+  border-radius: 50%;
+  width: 10vw;
+  height: 10vw;
+  animation: spin .5s linear infinite;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 17vh;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+  @keyframes drop {
+    0% {transform: translateY(-580px);}
+    40%{transform: translateY(-50px);}
+    55%{transform: translateX(-50px) translateY(-45px);}
+    75%{transform: translateX(29px) translateY(-25px);}
+    85%{transform: translateX(-55px) translateY(-20px);}
+    95%{transform: translateX(20px) translateY(-10px);}
+    100%{transform: translateX(-25px) translateY(0px);}
+  
+}
+
+.innoc{
+  background-image: url(rsz_innoc.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 10vw;
+  height: 10vw;
+  margin-left: 5vh;
+  animation: drop 1.5s linear;
+  color: light;
+  margin-bottom: 20px;
+}
+
+
+.playArea td{
+  border-radius: 50%;
+  border-left: black solid 1px;
+  border-bottom: black solid 1px;
+  opacity: 1;
+  box-shadow: -2px 5px 0 rgba(37, 37, 36, 0.514);
+} 
+
+
+ .One {
+  width: 100%;
+  height: 100%; 
+  border-radius: 50%;
+  background-color: #f4f471;
+  opacity: .7;
+  transition: background-color 2s;
+}
+
+.Two {
   width: 100%;
   height: 100%; 
   border-radius: 50%;
@@ -208,104 +600,4 @@ body {
 
 
 
-
-/* .start{
-  border-radius: 50%;
-  width: 15vw;
-  height: 15vw; 
-  cursor: url(rsz_innoc.png), pointer;
-  background-color: aqua;
-  margin-left: 10vw;
-  margin-top: 10vw; 
-} */
-
-/* @media screen and (max-width: 815px) {
-  #game {
-       width: 75vw;
-       margin-top: 20vh;
-       
-  } */
-
-/* Desktops and laptops -----------
-@media only screen 
-and (min-width : 1224px) {
-/* Styles */
-
-/* .startForm{
-  float: right;
-  background-color: bisque;
-  outline: solid black;
-  padding: 2%;
-  margin-right: 5vw;
-  margin-top: 5vw; 
-} */
-
-/* Smartphones (portrait) -----------  */
-@media only screen and (max-width: 420px) {
-  .playArea{
-    margin-left: 4vw;
-  }
-
-	#game {
-		border-radius: 50%;
-		background-color: rgb(153, 152, 152);
-		height: 85vw;
-		width: 85vw; 
-    text-align: center;
-		margin: auto 0;
-    border-left: 1.2vw rgba(7, 7, 7) double;
-    border-right: .5vw rgba(7, 7, 7) solid;
-    border-top: .3vw rgb(7, 7, 7) solid;
-    border-bottom: 1.5vw rgba(7, 7, 7) double;
-    cursor: url(rsz_innoc.png), pointer;
-    box-shadow: -3px 25px 0px rgb(75, 73, 73);
-    margin-top: 15vw;
-    opacity: 1;
-    transition: background-color 1s;
-	}
-
-	.start{
-    border-radius: 50%;
-    width: 25vw;
-    height: 25vw; 
-    cursor: url(rsz_innoc.png), pointer;
-    background-color: rgba(230, 184, 32, 0.5); 
-    border-left: 1.1vw rgba(7, 7, 7) double;
-    border-right: .5vw rgba(7, 7, 7) solid;
-    border-top: .3vw rgb(7, 7, 7) solid;
-    border-bottom: 1.1vw rgba(7, 7, 7) double;
-    margin-left: 5vw;
-    margin-top: 5vw; 
-    box-shadow: -2px 7px 0 rgb(80, 66, 19);
-    font-family: monospace;
-    font-weight: bolder;
-    
-  }
-
-  .win{
-    margin-top: 20vw;
-    font-family: monospace;
-  }
-
-  #resetGame{
-    position: absolute;
-    top: 25px;
-    right: 15vw;
-  }
-
-
-	#board {
-		margin: 0 auto;
-		margin-top: 11vw;
-		width: 59vw;
-    height: 59vw;
-    border-collapse: separate;
-    border-spacing: 7px;
-    
-	}
 }
-
-/* Large screens -----------
-@media only screen 
-and (min-width : 1000px) {
-/* Styles */
