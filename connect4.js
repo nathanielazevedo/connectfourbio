@@ -10,10 +10,30 @@ start.addEventListener('click', newGame);
 const gamePlay = document.querySelector('#board');
 const gameSpot = document.querySelector('.gameplay');
 const reset = document.querySelector('#resetGame');
+const instruct = document.querySelector('.instructionsArea');
 const load = document.querySelector('.load');
+const instructPageButton = document.querySelector('.instructions');
+const back = document.querySelector('.istart');
+
+instructPageButton.addEventListener('click', function(){
+	window2.classList.add('hide');
+	instruct.classList.remove('hide');
+	gameSpot.classList.add('hide');
+	
+})
+
+back.addEventListener('click', function(){
+	window2.classList.add('hide');
+	instruct.classList.add('hide');
+	gameSpot.classList.remove('hide');
+	
+})
+
 reset.addEventListener('click', function(){
-    window2.classList.add('hide');
-    gameSpot.classList.remove('hide');
+	window2.classList.add('hide');
+	instruct.classList.add('hide');
+	gameSpot.classList.remove('hide');
+	
 })
 
 
@@ -79,7 +99,7 @@ mainStart.addEventListener('click', function(){
     load.classList.add('hide'); 
     
     newGame();
-  }, 1300);
+  }, 1100);
 });
 
 
