@@ -1,8 +1,9 @@
 /* game board table */
 body {
-	background-image: linear-gradient(silver, black);
+	/* background-image: linear-gradient(silver, black); */
 	cursor: url(rsz_innoc.png), pointer;
-  height: 95vh;
+  height: 100%;
+  background-color: rgba(105, 92, 92, 0.788);
 
 }
 
@@ -247,7 +248,7 @@ and (min-width : 1224px) {
 
 	#game {
 		border-radius: 50%;
-		background-color: white;
+		background-color: rgb(153, 152, 152);
 		height: 85vw;
 		width: 85vw; 
     text-align: center;
@@ -257,7 +258,7 @@ and (min-width : 1224px) {
     border-top: .3vw rgb(7, 7, 7) solid;
     border-bottom: 1.5vw rgba(7, 7, 7) double;
     cursor: url(rsz_innoc.png), pointer;
-    box-shadow: -5px 25px 0px rgb(100, 97, 97);
+    box-shadow: -3px 25px 0px rgb(75, 73, 73);
     margin-top: 15vw;
     opacity: 1;
     transition: background-color 1s;
