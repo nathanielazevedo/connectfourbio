@@ -71,7 +71,7 @@ for(let each of p2choo){
     for(let each of p2choo){
       each.style.background = 'none'
     }
-    p2 = this.value;
+	p2 = this.value;
     this.style.background = this.value;
   })
 }
@@ -170,6 +170,7 @@ function newGame() {
 
 	function findSpotForCol(x) {
 		// TODO: write the real version of this, rather than always returning 0
+	
 		for (let i = HEIGHT - 1; i >= 0; i--) {
 			if (board[i][x] == null) {
 				board[i][x] = currPlayer;
@@ -209,11 +210,20 @@ function newGame() {
 
 	function handleClick(evt) {
 		if (noClick == 'yes' || gameOver == 'yes') return;
+		
 
 		noClick = 'yes';
-
+		let x = 0;
 		// get x from ID of clicked cell
-		let x = +evt.target.id;
+		if(evt != undefined){
+			x = +evt.target.id;}
+
+		if(currPlayer == 'Two' && p2 == 'silver'){
+			x = Math.floor(Math.random() * WIDTH);
+		}
+		
+			
+		
 
 		// get next spot in column (if none, ignore click)
 		let y = findSpotForCol(x);
@@ -250,9 +260,14 @@ function newGame() {
 		// switch players
 		// TODO: switch currPlayer 1 <-> 2
 		function switchPlayers() {
-			if (currPlayer == 'One') {
+			if (currPlayer == 'One' && p2 != 'silver') {
 				currPlayer = 'Two';
-			} else {
+			} 
+			if(currPlayer == 'One' && p2 == 'silver'){
+				currPlayer = 'Two';
+				handleClick();
+			}
+			else {
 				currPlayer = 'One';
 			}
 		}
