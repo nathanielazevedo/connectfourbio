@@ -176,6 +176,7 @@ function newGame() {
 				board[i][x] = currPlayer;
 				return i;
 			}
+			
 		}
 	}
 
@@ -197,7 +198,17 @@ function newGame() {
       }
     }, 1500);
 
+	try{
 		spot.append(piece);
+	}
+	catch{
+		if(currPlayer == 'One'){
+			return
+		}
+		x = Math.floor(Math.random() * WIDTH);
+		let y = findSpotForCol(x);
+		placeInTable(y, x);
+	}
 	}
 
 	/** endGame: announce game end */
@@ -224,10 +235,15 @@ function newGame() {
 		
 			
 		
-
+		
 		// get next spot in column (if none, ignore click)
 		let y = findSpotForCol(x);
-		if (y === null) {
+
+		
+		
+		console.log(y)
+		if (y === undefined && currPlayer == 'One') {
+			noClick = 'no';
 			return;
 		}
 
