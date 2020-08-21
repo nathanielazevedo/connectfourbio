@@ -136,7 +136,12 @@ body {
   font-family: monospace;
   transition: background-color 1s;
   text-shadow: -1px -1px 0 black, 1px 1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+  box-shadow: -1px -0px 0 gray, 1px 3px 0 black, -5px 3px 0 black, 0px 1px 0 black;
+  margin-bottom: 1px;
+  border-bottom: solid .5px white;
+	border-left: solid .5px white;
 }
+
 
 .startGame {
   margin: 0 auto;
@@ -501,13 +506,18 @@ and (min-width : 1200px) {
 }
 
 .inputButton {
-	background: none;
+	background: gray;
 	color: white;
-	border: none;
+	border-bottom: double 2px white;
+	border-left: double 2px white;
 	font-size: 3.2vh;
   font-family: monospace;
   transition: background-color 1s;
   text-shadow: -1px -1px 0 black, 1px 1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+  margin-top: 10px;
+  box-shadow: -1px -1px 0 gray, 1px 5px 0 black, -5px 5px 0 black, 0px 1px 0 black;
+
+
 }
 
 .startGame {
