@@ -28,7 +28,7 @@
 * Javascript
 
 ## Setup
-<button>Play Here</button>
+<button href='https://nathanielazevedo.github.io/microwars/'>Play Here</button>
 
 ## Code Examples
 Show examples of usage:
