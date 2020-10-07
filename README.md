@@ -22,8 +22,7 @@
 [Click Here](https://nathanielazevedo.github.io/microwars)
 
 
-## Skills
-List of features ready and TODOs for future development
+## Skills practiced
 * DOM manipulation
 * CSS styling and animation
 * HTML formatting
