@@ -6,15 +6,6 @@
 # Micro-Wars ![GitHub language count](https://img.shields.io/github/languages/count/nathanielazevedo/microwars)
 > Connect Four with a microbe twist. Choose your board size, microbes and agar type. Enjoy!
 
-## Table of contents
-* [General info](#general-info)
-* [Screenshots](#screenshots)
-* [Technologies](#technologies)
-* [Play](#play)
-* [Skills](#skills)
-* [Status](#status)
-
-
 
 ## General info
 
